@@ -75,6 +75,11 @@ barchartGC(~infected + treatment,data=DataLGBTQ, type="percent")
 Datadrug<-filter(FinalData,DrugUser=="yes")
 ```
 ## Graphical Results for Drug Users  
+```{r}
+barchartGC(~infected + treatment,data=Datadrug)
+barchartGC(~infected + treatment,data=Datadrug, type="percent")
+
+```
 ## Numerical Results for Drug Users  
 ## Inferentials Results for Drug Users 
 
