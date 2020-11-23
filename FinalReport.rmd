@@ -60,6 +60,12 @@ DataLGBTQ<-filter(FinalData,LGBTQ=="gay")
 ```
 
 ## Graphical Results for LGBTQ 
+```{r}
+barchartGC(~infected + treatment,data=DataLGBTQ)
+barchartGC(~infected + treatment,data=DataLGBTQ, type="percent")
+
+```
+
 ## Numerical Results for LGBTQ
 ## Inferentials Results for LGBTQ
 
