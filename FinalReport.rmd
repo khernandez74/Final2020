@@ -43,6 +43,12 @@ colPerc(table1)
 
 ## Inferentials Results for Females 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
 
 # Males 
 
@@ -67,6 +73,12 @@ colPerc(table1)
 
 ## Inferentials Results for Males
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
 # LGBTQ
 
 ```{r}
@@ -90,6 +102,12 @@ colPerc(table1)
 
 ## Inferentials Results for LGBTQ
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
 # Drug Users 
 
 ```{r}
@@ -110,6 +128,12 @@ colPerc(table1)
 ```
 
 ## Inferentials Results for Drug Users 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 # Discussion and Conclusion
 
