@@ -42,7 +42,14 @@ barchartGC(~infected + treatment,data=DataF, type="percent")
 ```{r}
 DataM<-filter(FinalData,sex=="guy")
 ```
+
 ## Graphical Results for Males 
+```{r}
+barchartGC(~infected + treatment,data=DataM)
+barchartGC(~infected + treatment,data=DataM, type="percent")
+
+```
+
 ## Numerical Results for Males
 ## Inferentials Results for Males
 
