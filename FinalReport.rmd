@@ -20,15 +20,50 @@ FinalData <- OldData %>% mutate(infected = recode(infected, aids = "covid", none
 
 A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine.
 
-# Methods
-
-<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
-
-# Results
-
-<!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
+# Females 
+```{r}
+DataF<-filter(FinalData,sex=="gal")
+```
 
 
+## Graphical Results for Females 
+```{r}
+barchartGC(~infected + treatment,data=DataF)
+barchartGC(~infected + treatment,data=DataF, type="percent")
+
+```
+
+## Numerical Results for Females 
+## Inferentials Results for Females 
+
+
+# Males 
+
+```{r}
+DataM<-filter(FinalData,sex=="guy")
+```
+## Graphical Results for Males 
+## Numerical Results for Males
+## Inferentials Results for Males
+
+# LGBTQ
+
+```{r}
+DataLGBTQ<-filter(FinalData,LGBTQ=="gay")
+```
+
+## Graphical Results for LGBTQ 
+## Numerical Results for LGBTQ
+## Inferentials Results for LGBTQ
+
+# Drug Users 
+
+```{r}
+Datadrug<-filter(FinalData,DrugUser=="yes")
+```
+## Graphical Results for Drug Users  
+## Numerical Results for Drug Users  
+## Inferentials Results for Drug Users 
 
 # Discussion and Conclusion
 
