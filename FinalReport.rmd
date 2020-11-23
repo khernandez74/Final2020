@@ -34,6 +34,13 @@ barchartGC(~infected + treatment,data=DataF, type="percent")
 ```
 
 ## Numerical Results for Females 
+
+```{r}
+table1 <- xtabs(~infected + treatment,data=DataF)
+rowPerc(table1)
+colPerc(table1)
+```
+
 ## Inferentials Results for Females 
 
 
@@ -51,6 +58,13 @@ barchartGC(~infected + treatment,data=DataM, type="percent")
 ```
 
 ## Numerical Results for Males
+
+```{r}
+table1 <- xtabs(~infected + treatment,data=DataM)
+rowPerc(table1)
+colPerc(table1)
+```
+
 ## Inferentials Results for Males
 
 # LGBTQ
@@ -67,6 +81,13 @@ barchartGC(~infected + treatment,data=DataLGBTQ, type="percent")
 ```
 
 ## Numerical Results for LGBTQ
+
+```{r}
+table1 <- xtabs(~infected + treatment,data=DataLGBTQ)
+rowPerc(table1)
+colPerc(table1)
+```
+
 ## Inferentials Results for LGBTQ
 
 # Drug Users 
@@ -81,6 +102,13 @@ barchartGC(~infected + treatment,data=Datadrug, type="percent")
 
 ```
 ## Numerical Results for Drug Users  
+
+```{r}
+table1 <- xtabs(~infected + treatment,data=Datadrug)
+rowPerc(table1)
+colPerc(table1)
+```
+
 ## Inferentials Results for Drug Users 
 
 # Discussion and Conclusion
