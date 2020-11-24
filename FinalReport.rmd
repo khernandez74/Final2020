@@ -1,7 +1,7 @@
 ---
 title: "Covid91 vaccine study Final2020"
-author: "Put your name here!"
-date: "put the date here"
+author: "Karen Hernandez!"
+date: "November 23, 2020"
 output: html_document
 ---
 
@@ -135,6 +135,15 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+
 # Discussion and Conclusion
+
+I would recommend that if you are female that you take the drug to prevent getting infected. By taking the drug you are 50% less likely to get infected than if you take the placebo.
+
+If you are a male, I would recommend for you to take the drug. By taking the drug you are about 1.5 time more likely to get infected than by taking the placebo. 
+
+If you are a member of the LGBTQ, I would recommend that you take the drug. By taking the drug you are about 2.5 times more likely to get infected than by taking the placebo. 
+
+If you are a drug user, I would recommend that you take the drug. By taking the drug, you are about 55% less likely to get infected than by taking the placebo.
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
