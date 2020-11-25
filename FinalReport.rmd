@@ -21,12 +21,14 @@ FinalData <- OldData %>% mutate(infected = recode(infected, aids = "covid", none
 A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine.
 
 # Females 
+
 ```{r}
 DataF<-filter(FinalData,sex=="gal")
 ```
 
 
 ## Graphical Results for Females 
+
 ```{r}
 barchartGC(~infected + treatment,data=DataF)
 barchartGC(~infected + treatment,data=DataF, type="percent")
@@ -57,6 +59,7 @@ DataM<-filter(FinalData,sex=="guy")
 ```
 
 ## Graphical Results for Males 
+
 ```{r}
 barchartGC(~infected + treatment,data=DataM)
 barchartGC(~infected + treatment,data=DataM, type="percent")
@@ -86,11 +89,14 @@ DataLGBTQ<-filter(FinalData,LGBTQ=="gay")
 ```
 
 ## Graphical Results for LGBTQ 
+
 ```{r}
 barchartGC(~infected + treatment,data=DataLGBTQ)
 barchartGC(~infected + treatment,data=DataLGBTQ, type="percent")
 
 ```
+
+As we can see by the graph, it shows that out of the LGBTQ who got COVID, about 70% took the drug while 30% took the placebo. This shows that the drug is not effective in preventing LGBTQ from getting infected. Of those that did not get COVID, about 49% took the drug and 51% took the placebo. 
 
 ## Numerical Results for LGBTQ
 
@@ -100,6 +106,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+The Numerical Results for LGBTQ shows that of those who got COVID, 70.69% took the drug while 29.31% took the placebo. Of those that did not get COVID, 49.17% took the drug while 50.83% took the placebo. This proves that our observations from the graphical results that the drug is not effective for the LGBTQ community. 
+
 ## Inferentials Results for LGBTQ
 
 ```{r}
@@ -108,17 +116,24 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+In the Fisher's Exact Test, it shows a P value of 0.000005741. The 95% confidence interval is between 1.63 and 3.87. The odds ratio of 2.49:1 shows that for a member of the LGBTQ community, the odds of getting infected are about 2.5 times higher by taking the drug than by taking the placebo. This means that the drug is absolutely not working. The chances of getting COVID are multiplied by two and a half times when taking the drug than by not taking the drug. My recommendation would be to not take the drug. 
+
 # Drug Users 
 
 ```{r}
 Datadrug<-filter(FinalData,DrugUser=="yes")
 ```
+
 ## Graphical Results for Drug Users  
+
 ```{r}
 barchartGC(~infected + treatment,data=Datadrug)
 barchartGC(~infected + treatment,data=Datadrug, type="percent")
 
 ```
+
+We can see that the graph reflects that for the drug users who got COVID, about 35% took the drug while 65% took the placebo. This shows that the drug seems to be working for the drug users. Of those that did not get COVID, about 47% took the drug while 53% took the placebo. 
+
 ## Numerical Results for Drug Users  
 
 ```{r}
@@ -127,7 +142,10 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+The numerical Results shows that for the drug users who got COVID, only 33.33% took the drug while 66.67% took the placebo. Of those that did not get COVID, 47.83% got the drug while 52.17% got the placebo. This proves that by our observations that the drug is working for the drug users in preventing infection.
+
 ## Inferentials Results for Drug Users 
+
 
 ```{r}
 chisq.test(table1)
@@ -135,6 +153,8 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+
+The Fisher's Exact Test show that the value of P is 0.002273. The 95% confidence interval is between .35 and .81. Tha odds ration of .55:1 means that the drug users are 55% less likely to get infected by taking the drug than those who took the placebo. This means the drug is working and is decreasing the chances of them getting COVID by a little more than half. I would recommend to take the drug. 
 
 # Discussion and Conclusion
 
