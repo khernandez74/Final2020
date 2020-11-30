@@ -35,6 +35,9 @@ barchartGC(~infected + treatment,data=DataF, type="percent")
 
 ```
 
+This barchart shows that from the females that got COVID, about 35% took the drug while 65% took the placebo. Which shows that the drug seems to be effective for females. For those females that were not infected, the amount who took the drug was about the same than those who took the placebo. 
+
+
 ## Numerical Results for Females 
 
 ```{r}
@@ -42,6 +45,8 @@ table1 <- xtabs(~infected + treatment,data=DataF)
 rowPerc(table1)
 colPerc(table1)
 ```
+The numerical results show that of the female population who were infected, 33.11 % took the drug while 66.89% took the placebo. Of the females that did not get COVID, 50.31% took the drug, while 49.69% took the placebo. This supports our observation of the graph that the drug is working for females. 
+
 
 ## Inferentials Results for Females 
 
@@ -51,6 +56,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+The Fisher's Exact Test shows a very small P value. The 95% confidence interval is between 0.40 and 0.58. The odds ratio is .49:1. This means females who took the drug are about 50% less likely to get infected than those who took the placebo. This means that the drug is working for the females. I would highly recommend the drug for the females.
 
 # Males 
 
@@ -66,6 +72,8 @@ barchartGC(~infected + treatment,data=DataM, type="percent")
 
 ```
 
+The barchart shows that from the Males that got COVID, about 58% took the drug compared to about 42% that took the placebo. This means that the drug does not seem to be effective in preventing males from getting infected. For those Males that did not get COVID, about 48% took the drug and 52% took the placebo. 
+
 ## Numerical Results for Males
 
 ```{r}
@@ -73,6 +81,7 @@ table1 <- xtabs(~infected + treatment,data=DataM)
 rowPerc(table1)
 colPerc(table1)
 ```
+The numerical Results show that of the Males who got COVID, 58.16% took the drug while 41.84% took the placebo. Of those that did not get COVID, 48.54% took the drug, while 51.46% took the placebo. This supports our observations from the graph that the drug is not effective in preventing males from getting infected. 
 
 ## Inferentials Results for Males
 
@@ -81,6 +90,8 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
+The fisher's exact test shows a p value of 0.0005801. the 95% confidence interval is between 1.17 and 1.84. The odds ration of 1.47 shows that men are about 1.5 more likely to get infected by taking the drug than those who took the placebo. This means that the drug is not working for the men. Men are about on and a half times more likely to get COVID by taking the drug. My recommendation for men is not to take the drug. 
+
 
 # LGBTQ
 
